@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'Okeh — Original Chicken</title>
+    <meta name="description" content="D'Okeh Original Chicken — Okeh Rasanya, Okeh Harganya.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#home" class="brand">
+            <img class="brand-mark" src="D’Okeh Chicken Chef Logo.png" alt="D'Okeh logo">
+            <span>D'Okeh</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
+
+        <nav id="navMenu">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#testimonials">Testimoni</a>
+            <a href="#faq">FAQ</a>
+            <a href="#about">Tentang</a>
+            <a href="#contact">Kontak</a>
+        </nav>
+
+        <a class="nav-order" href="https://wa.me/6282211985304?text=Halo%20D'Okeh%2C%20saya%20mau%20pesan%20makanan." target="_blank">
+            Pesan Sekarang
+        </a>
+
+        <button class="cart-button" id="cartButton" type="button" aria-label="Keranjang">
+            🛒
+            <span id="cart-count">0</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content reveal">
+                <span class="eyebrow">UMKM CHICKEN • CIMAHI</span>
+                <h1>Okeh Rasanya,<br><span>Okeh Harganya.</span></h1>
+                <p>
+                    Ayam crispy, ayam geprek, dan chicken barbeque dengan
+                    rasa yang mantap dan harga yang tetap bersahabat.
+                </p>
+
+                <div class="hero-badges" aria-label="Fitur unggulan D'Okeh">
+                    <span>Crispy</span>
+                    <span>Geprek</span>
+                    <span>Barbeque</span>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary">Lihat Menu <span>↓</span></a>
+                    <a href="https://wa.me/6282211985304?text=Halo%20D'Okeh%2C%20saya%20mau%20pesan%20makanan." target="_blank" class="btn btn-outline">
+                        WhatsApp
+                    </a>
+                </div>
+
+                <div class="trust-strip" aria-label="Keunggulan D'Okeh">
+                    <span>✓ Ayam Fresh</span>
+                    <span>✓ Harga Hemat</span>
+                    <span>✓ Rasa Nikmat</span>
+                </div>
+
+                <div class="hero-info">
+                    <div><strong>9+</strong><span>Pilihan Menu</span></div>
+                    <div><strong>10K+</strong><span>Harga Bersahabat</span></div>
+                    <div><strong>✓</strong><span>Halal</span></div>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal">
+                <div class="glow"></div>
+                <div class="food-circle brand-hero-circle">
+                    <img class="hero-food-image" src="D’Okeh Chicken Chef Logo-jukebox-bg-removed-1254x1254.png" alt="Logo D'Okeh">
+                    <span class="floating-tag tag-1">CRISPY!</span>
+                    <span class="floating-tag tag-3">MURAH!</span>
+                </div>
+                <div class="price-badge">
+                    <small>Mulai dari</small>
+                    <strong>Rp7.000</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section" id="menu">
+            <div class="section-heading reveal">
+                <span class="eyebrow">MENU FAVORIT</span>
+                <h2>Pilih Ayam Favoritmu 🍗</h2>
+                <p>Menu D'Okeh yang cocok buat makan sendiri, bareng teman, atau keluarga.</p>
+            </div>
+
+            <div class="mini-highlights reveal">
+                <div>
+                    <strong>4.9/5</strong>
+                    <span>Rating pelanggan</span>
+                </div>
+                <div>
+                    <strong>1K+</strong>
+                    <span>Pesanan puas</span>
+                </div>
+                <div>
+                    <strong>30 Menit</strong>
+                    <span>Siap antar</span>
+                </div>
+            </div>
+
+            <div class="menu-grid">
+                <article class="menu-card reveal">
+                    <div class="menu-image">
+                        <img src="original_chicken.png" alt="Original Chicken D'Okeh" loading="lazy">
+                    </div>
+                    <div class="card-top"><span>BEST SELLER</span></div>
+                    <h3>Original Chicken</h3>
+                    <p>Ayam crispy gurih dengan tekstur renyah.</p>
+                    <div class="card-bottom">
+                        <strong>Rp7.000</strong>
+                        <button onclick="orderMenu('Original Chicken', 'Rp7.500')">Pesan</button>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal">
+                    <div class="menu-image">
+                        <img src="02_chicken_geprek(1).png" alt="Chicken Geprek D'Okeh" loading="lazy">
+                    </div>
+                    <div class="card-top"><span>PEDAS NAGIH</span></div>
+                    <h3>Chicken Geprek</h3>
+                    <p>Ayam crispy dengan sambal geprek yang menggugah selera.</p>
+                    <div class="card-bottom">
+                        <strong>Rp10.000</strong>
+                        <button onclick="orderMenu('Chicken Geprek', 'Rp10.500')">Pesan</button>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal">
+                    <div class="menu-image">
+                        <img src="03_chicken_barbeque(1).png" alt="Chicken Barbeque D'Okeh" loading="lazy">
+                    </div>
+                    <div class="card-top"><span>REKOMENDASI</span></div>
+                    <h3>Chicken Barbeque</h3>
+                    <p>Ayam dengan saus barbeque manis gurih.</p>
+                    <div class="card-bottom">
+                        <strong>Rp10.000</strong>
+                        <button onclick="orderMenu('Chicken Barbeque', 'Rp10.500')">Pesan</button>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal">
+                    <div class="menu-image">
+                        <img src="04_original_paket_nasi(1).png" alt="Original Paket Nasi" loading="lazy">
+                    </div>
+                    <div class="card-top"><span>HEMAT</span></div>
+                    <h3>Original Paket Nasi</h3>
+                    <p>Original chicken lengkap dengan nasi putih.</p>
+                    <div class="card-bottom">
+                        <strong>Rp10.000</strong>
+                        <button onclick="orderMenu('Original Paket Nasi', 'Rp10.500')">Pesan</button>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal">
+                    <div class="menu-image">
+                        <img src="05_paket_geprek_nasi(1).png" alt="Paket Geprek Nasi" loading="lazy">
+                    </div>
+                    <div class="card-top"><span>FAVORIT</span></div>
+                    <h3>Paket Geprek Nasi</h3>
+                    <p>Chicken geprek + nasi, pas untuk makan siang.</p>
+                    <div class="card-bottom">
+                        <strong>Rp12.000</strong>
+                        <button onclick="orderMenu('Paket Geprek Nasi', 'Rp12.500')">Pesan</button>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal">
+                    <div class="menu-image">
+                        <img src="06_paket_chicken_barbeque(1).png" alt="Paket Chicken Barbeque" loading="lazy">
+                    </div>
+                    <div class="card-top"><span>COMBO</span></div>
+                    <h3>Paket Chicken Barbeque</h3>
+                    <p>Chicken barbeque + nasi dengan rasa manis gurih.</p>
+                    <div class="card-bottom">
+                        <strong>Rp12.000</strong>
+                        <button onclick="orderMenu('Paket Chicken Barbeque', 'Rp12.500')">Pesan</button>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal">
+                    <div class="menu-image">
+                        <img src="07_paket_okeh_1(1).png" alt="Paket Okeh 1" loading="lazy">
+                    </div>
+                    <div class="card-top"><span>PAKET OKEH</span></div>
+                    <h3>Paket Okeh 1</h3>
+                    <p>Original chicken + nasi + air mineral.</p>
+                    <div class="card-bottom">
+                        <strong>Rp13.000</strong>
+                        <button onclick="orderMenu('Paket Okeh 1', 'Rp13.500')">Pesan</button>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal">
+                    <div class="menu-image">
+                        <img src="08_paket_okeh_2(1).png" alt="Paket Okeh 2" loading="lazy">
+                    </div>
+                    <div class="card-top"><span>PAKET OKEH</span></div>
+                    <h3>Paket Okeh 2</h3>
+                    <p>Chicken geprek + nasi + air mineral.</p>
+                    <div class="card-bottom">
+                        <strong>Rp15.000</strong>
+                        <button onclick="orderMenu('Paket Okeh 2', 'Rp15.500')">Pesan</button>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal">
+                    <div class="menu-image">
+                        <img src="09_paket_okeh_3(1).png" alt="Paket Okeh 3" loading="lazy">
+                    </div>
+                    <div class="card-top"><span>PAKET OKEH</span></div>
+                    <h3>Paket Okeh 3</h3>
+                    <p>Chicken barbeque + nasi + air mineral.</p>
+                    <div class="card-bottom">
+                        <strong>Rp15.000</strong>
+                        <button onclick="orderMenu('Paket Okeh 3', 'Rp15.000')">Pesan</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="promo-banner reveal">
+                <div class="promo-copy">
+                    <span class="eyebrow">PROMO HARI INI</span>
+                    <h3>Paket keluarga lebih hemat, rasa tetap okeh.</h3>
+                </div>
+                <a href="https://wa.me/6282211985304?text=Halo%20D'Okeh%2C%20saya%20mau%20pesan%20paket%20keluarga." target="_blank" class="btn btn-primary">Pesan Promo</a>
+            </div>
+        </section>
+
+        <section class="testimonials" id="testimonials">
+            <div class="section-heading reveal">
+                <span class="eyebrow">TESTIMONI</span>
+                <h2>Kenapa pelanggan suka D'Okeh?</h2>
+            </div>
+
+            <div class="testimonial-grid">
+                <article class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"Ayamnya renyah, sambalnya pas, dan harganya tetap ramah di kantong. Cocok buat makan santai."</p>
+                    <div class="person">
+                        <strong>Alya</strong>
+                        <span>Pelanggan Setia</span>
+                    </div>
+                </article>
+
+                <article class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"Paket nasi-nya bikin kenyang banget. Rasanya konsisten dan pengiriman cepat banget."</p>
+                    <div class="person">
+                        <strong>Rafi</strong>
+                        <span>Mahasiswa</span>
+                    </div>
+                </article>
+
+                <article class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"D'Okeh jadi pilihan favorit saat nongkrong bareng teman. Semua menu rasa enak dan bikin nagih."</p>
+                    <div class="person">
+                        <strong>Nia</strong>
+                        <span>Customer</span>
+                    </div>
+                </article>
+
+                <article class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"Rasa ayamnya konsisten, bumbunya terasa banget, dan selalu datang dalam kondisi hangat. Recommended banget."</p>
+                    <div class="person">
+                        <strong>Rizky</strong>
+                        <span>Freelancer</span>
+                    </div>
+                </article>
+
+                <article class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"Baru coba sekali langsung suka. Harganya bersahabat, sambalnya mantap, dan porsinya cukup buat kenyang."</p>
+                    <div class="person">
+                        <strong>Putri</strong>
+                        <span>Mahasiswi</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="faq" id="faq">
+            <div class="section-heading reveal">
+                <span class="eyebrow">FAQ</span>
+                <h2>Pertanyaan yang sering ditanya</h2>
+                <p>Informasi singkat sebelum kamu pesan menu favoritmu.</p>
+            </div>
+
+            <div class="faq-list">
+                <details class="faq-item reveal" open>
+                    <summary>Bagaimana cara memesan?</summary>
+                    <p>Pilih menu yang kamu suka, lalu klik tombol Pesan. Item akan masuk ke keranjang, dan kamu bisa cek kembali sebelum checkout via WhatsApp.</p>
+                </details>
+
+                <details class="faq-item reveal">
+                    <summary>Apakah bisa pesan untuk acara atau paket keluarga?</summary>
+                    <p>Bisa. Silakan hubungi WhatsApp D'Okeh dan jelaskan kebutuhan jumlah pesanan serta waktu pengiriman atau acara yang ingin dikerjakan.</p>
+                </details>
+
+                <details class="faq-item reveal">
+                    <summary>Menu apa yang paling rekomendasi?</summary>
+                    <p>Original Chicken, Chicken Geprek, dan Paket Okeh 1 biasanya paling banyak disukai karena kombinasi rasa, harga, dan porsinya yang pas.</p>
+                </details>
+
+                <details class="faq-item reveal">
+                    <summary>Apakah harga sudah termasuk biaya tambahan?</summary>
+                    <p>Harga yang tertera sudah mencerminkan skema menu utama. Untuk kebutuhan khusus, kamu bisa konfirmasi langsung ke admin untuk detail lebih lanjut.</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="poster-wrap reveal">
+                <img src="d-okeh.png" alt="Daftar menu D'Okeh">
+            </div>
+
+            <div class="about-content reveal">
+                <span class="eyebrow">TENTANG D'OKEH</span>
+                <div class="about-badge">Rasa Okeh, Harga Nyaman</div>
+                <h2>Ayam enak nggak harus mahal.</h2>
+                <p>
+                    D'Okeh hadir sebagai UMKM kuliner dengan pilihan ayam crispy,
+                    geprek, barbeque, serta paket nasi dan minuman.
+                    Konsepnya sederhana: rasa okeh, harga juga okeh.
+                </p>
+
+                <div class="feature-list">
+                    <div><span>✓</span><p><b>Harga Bersahabat</b><br>Mulai dari Rp7.500.</p></div>
+                    <div><span>✓</span><p><b>Menu Beragam</b><br>Original, geprek, barbeque, dan paket.</p></div>
+                    <div><span>✓</span><p><b>Halal</b><br>Cocok untuk dinikmati bersama.</p></div>
+                </div>
+
+                <a href="https://wa.me/6282211985304?text=Halo%20D'Okeh%2C%20saya%20mau%20pesan%20makanan." target="_blank" class="about-cta">Pesan Sekarang</a>
+            </div>
+        </section>
+
+        <section class="location" id="contact">
+            <div class="location-inner reveal">
+                <div class="location-copy">
+                    <div>
+                        <span class="eyebrow">KUNJUNGI KAMI</span>
+                        <h2>Lagi laper? D'Okeh aja.</h2>
+                        <p>depan gor dua saudara, Jl. Ciawitali, Citeureup, Kec. Cimahi Utara, Bandung, Jawa Barat 40512</p>
+                        <a
+                            class="location-direction"
+                            href="https://www.google.com/maps/search/?api=1&query=depan+gor+dua+saudara,+Jl.+Ciawitali,+Citeureup,+Kec.+Cimahi+Utara,+Bandung,+Jawa+Barat+40512"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Petunjuk Lokasi
+                        </a>
+                    </div>
+
+                    <div class="contact-box">
+                        <a href="https://wa.me/6282211985304?text=Halo%20D'Okeh%2C%20saya%20mau%20pesan%20makanan." target="_blank">
+                            <span>WhatsApp</span>
+                            <strong>0822-1198-5304</strong>
+                        </a>
+                        <a href="https://maps.app.goo.gl/hx3iP76ioTgXQJY46" target="_blank" rel="noopener noreferrer">
+                            <span>Google Maps</span>
+                            <strong>Lihat Lokasi</strong>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="map-wrap" aria-label="Peta lokasi D'Okeh">
+                    <iframe
+                        src="https://www.google.com/maps?q=depan+gor+dua+saudara,+Jl.+Ciawitali,+Citeureup,+Kec.+Cimahi+Utara,+Bandung,+Jawa+Barat+40512&z=15&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">🍗 D'Okeh</div>
+            <p>Okeh Rasanya, Okeh Harganya.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#faq">FAQ</a>
+                <a href="#about">Tentang</a>
+                <a href="#contact">Kontak</a>
+            </div>
+        </div>
+        <small>© <span id="year"></span> D'Okeh. Semua hak dilindungi.</small>
+    </footer>
+
+    <aside class="cart-panel" id="cartPanel" aria-label="Keranjang belanja">
+        <div class="cart-header">
+            <h3>Keranjang</h3>
+            <button type="button" id="closeCart">✕</button>
+        </div>
+
+        <div id="cart-items" class="cart-items">
+            <p class="empty-cart">Belum ada item di keranjang.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total-wrap">
+                <span>Total</span>
+                <strong id="cart-total">Rp0</strong>
+            </div>
+            <button type="button" id="checkoutCart" class="checkout-btn">Checkout</button>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast">Pesanan disiapkan...</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
